@@ -112,8 +112,6 @@ function App() {
         
         <ImagePopup card={selectedCard} onClose={closeAllPopups}/>
       </div>
-
-      <script type="module" src="./scripts/script.js"></script>
     </div>
   );
 }
