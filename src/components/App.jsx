@@ -7,10 +7,10 @@ import ImagePopup from "./ImagePopup.jsx";
 import PopupWithForm from "./PopupWithForm.jsx";
 
 function App() {
-  const [selectedCard, setSelectedCard] = useState('');
+  const [selectedCard, setSelectedCard] = useState(null);
 
-  function handleCardClick (link){
-    setSelectedCard(link)
+  function handleCardClick(card){
+    setSelectedCard(card)
   }
 
   const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = useState(false);
@@ -33,7 +33,7 @@ function App() {
     setIsEditAvatarPopupOpen(false);
     setIsEditProfilePopupOpen(false);
     setIsAddPlacePopupOpen(false)
-    setSelectedCard('')
+    setSelectedCard(null)
   }
 
   return (
@@ -42,40 +42,34 @@ function App() {
         <Header />
         <Main onEditProfile={handleEditProfileClick} onAddPlace={handleAddPlaceClick} onEditAvatar={handleEditAvatarClick} onCardClick={handleCardClick}/>
         <Footer />
-        <PopupWithForm title='Редактировать профиль' name='profile-edit' isOpen={isEditProfilePopupOpen} onClose={closeAllPopups}>
+        <PopupWithForm title='Редактировать профиль' name='profile-edit' isOpen={isEditProfilePopupOpen} onClose={closeAllPopups} submitButtonText='Сохранить'>
           <div className="form__inputs">
             <input
-            id="name"
-            required
-            minLength="2"
-            maxLength="40"
-            name="fild_name"
-            type="text"
-            placeholder="Название"
-            className="form__input profile-edit-form__input-fild-name"
+              id="name"
+              required
+              minLength="2"
+              maxLength="40"
+              name="fild_name"
+              type="text"
+              placeholder="Название"
+              className="form__input profile-edit-form__input-fild-name"
             />
             <span id="name-error" className="form__input-error"></span>
             <input
-            id="about"
-            required
-            minLength="2"
-            maxLength="200"
-            name="fild_about"
-            type="text"
-            placeholder="Проффесия"
-            className="form__input profile-edit-form__input-fild-about"
+              id="about"
+              required
+              minLength="2"
+              maxLength="200"
+              name="fild_about"
+              type="text"
+              placeholder="Проффесия"
+              className="form__input profile-edit-form__input-fild-about"
             />
             <span id="about-error" className="form__input-error"></span>
           </div>
-          <button
-          type="submit"
-          className="form__button-save profile-edit-form__button-save"
-          >
-          Сохранить
-          </button>
         </PopupWithForm>
 
-        <PopupWithForm title='Обновить аватар' name='profile-img-edit' isOpen={isEditAvatarPopupOpen} onClose={closeAllPopups}>
+        <PopupWithForm title='Обновить аватар' name='profile-img-edit' isOpen={isEditAvatarPopupOpen} onClose={closeAllPopups} submitButtonText='Сохранить'>
               <div className="form__inputs">
                 <input
                   id="avatar"
@@ -87,15 +81,9 @@ function App() {
                 />
                 <span id="avatar-error" className="form__input-error"></span>
               </div>
-              <button
-                type="submit"
-                className="form__button-save profile-img-edit-popup__button-save"
-              >
-                Сохранить
-              </button>
         </PopupWithForm>
 
-        <PopupWithForm title='Новое место' name='add-place' isOpen={isAddPlacePopupOpen} onClose={closeAllPopups}>
+        <PopupWithForm title='Новое место' name='add-place' isOpen={isAddPlacePopupOpen} onClose={closeAllPopups} submitButtonText='Сохранить'>
         <div className="form__inputs">
                 <input
                   id="place"
@@ -118,29 +106,13 @@ function App() {
                 />
                 <span id="img-error" className="form__input-error"></span>
               </div>
-              <button
-                type="submit"
-                className="form__button-save add-place-form__button-save"
-              >
-                Сохранить
-              </button>
         </PopupWithForm>
 
+        <PopupWithForm  title='Вы уверены?' name='delete-card' isOpen='' onClose={closeAllPopups} submitButtonText='Да' />
+        
         <ImagePopup card={selectedCard} onClose={closeAllPopups}/>
-
-        <template id="template">
-          <li className="element">
-            <img src="#" alt="Картинка элемента" className="element__img" />
-            <div className="element__info">
-              <h2 className="element__text">Текс элемента</h2>
-              <button type="button" className="element__heart"></button>
-            </div>
-            <button type="button" className="element__trash button"></button>
-          </li>
-        </template>
       </div>
 
-      <script src="./utils/initialCards.js"></script>
       <script type="module" src="./scripts/script.js"></script>
     </div>
   );

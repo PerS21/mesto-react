@@ -1,5 +1,5 @@
-import Vector from "../../src/images/Vector.svg";
-import AddPlace from "../../src/images/Vectoradd.svg";
+import pencil from "../../src/images/Pencil.svg";
+import addPlace from "../../src/images/Plus.svg";
 import api from '../utils/api.js'
 import React, { useState, useEffect } from 'react';
 import Card from './Card.jsx'
@@ -8,7 +8,7 @@ function Main(props) {
   const [cards, setCards] = useState([]);
 
   useEffect(() => {
-    api.getCards().then(res => setCards(res))
+    api.getCards().then(res => setCards(res)).catch(error => console.log(error))
   }, []);
 
   const [userName, setUserName] = useState('');
@@ -16,16 +16,12 @@ function Main(props) {
   const [userAvatar, setUserAvatar] = useState('');
 
   useEffect(() => {
-    api.getUser().then((res) => (setUserName(res.name)))
-  }, [userName]);
-
-  useEffect(() => {
-    api.getUser().then((res) => (setUserDescription(res.about)))
-  }, [userDescription]);
-
-  useEffect(() => {
-    api.getUser().then((res) => (setUserAvatar(res.avatar)))
-  }, [userAvatar]);
+    api.getUser().then((res) => {
+      setUserName(res.name);
+      setUserDescription(res.about);
+      setUserAvatar(res.avatar);
+    }).catch(error => console.log(error))
+  }, []);
 
   return (
     <main className="content">
@@ -36,7 +32,7 @@ function Main(props) {
             <div className="profile__avatar-edit">
               <img
                 className="profile__avatar-edit-icon"
-                src={Vector}
+                src={pencil}
                 alt="Изменить"
               />
             </div>
@@ -49,7 +45,7 @@ function Main(props) {
                 className="profile__edit-button button"
                 onClick={props.onEditProfile}
               >
-                <img src={Vector} alt="Изменить" />
+                <img src={pencil} alt="Изменить" />
               </button>
             </div>
             <p className="profile__prof">{userDescription}</p>
@@ -60,7 +56,7 @@ function Main(props) {
           className="profile__add-button button"
           onClick={props.onAddPlace}
         >
-          <img src={AddPlace} alt="Добавить" />
+          <img src={addPlace} alt="Добавить" />
         </button>
       </section>
       <section className="elements">
