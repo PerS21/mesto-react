@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "./static/css/main.fdfaff14.chunk.css",
-    "main.js": "./static/js/main.84a043ba.chunk.js",
-    "main.js.map": "./static/js/main.84a043ba.chunk.js.map",
-    "runtime-main.js": "./static/js/runtime-main.575de3a3.js",
-    "runtime-main.js.map": "./static/js/runtime-main.575de3a3.js.map",
-    "static/js/2.74a8663e.chunk.js": "./static/js/2.74a8663e.chunk.js",
-    "static/js/2.74a8663e.chunk.js.map": "./static/js/2.74a8663e.chunk.js.map",
-    "static/js/3.f7a6632e.chunk.js": "./static/js/3.f7a6632e.chunk.js",
-    "static/js/3.f7a6632e.chunk.js.map": "./static/js/3.f7a6632e.chunk.js.map",
-    "index.html": "./index.html",
-    "static/css/main.fdfaff14.chunk.css.map": "./static/css/main.fdfaff14.chunk.css.map",
-    "static/js/2.74a8663e.chunk.js.LICENSE.txt": "./static/js/2.74a8663e.chunk.js.LICENSE.txt",
-    "static/media/App.css": "./static/media/heartBlack.fe17a515.svg",
-    "static/media/Pencil.8667ac4a.svg": "./static/media/Pencil.8667ac4a.svg",
-    "static/media/Plus.d86bb2ed.svg": "./static/media/Plus.d86bb2ed.svg",
-    "static/media/VectorLogo.03b78ada.svg": "./static/media/VectorLogo.03b78ada.svg"
+    "main.css": "/PerS21/mesto-react/static/css/main.176a0ef1.chunk.css",
+    "main.js": "/PerS21/mesto-react/static/js/main.84a043ba.chunk.js",
+    "main.js.map": "/PerS21/mesto-react/static/js/main.84a043ba.chunk.js.map",
+    "runtime-main.js": "/PerS21/mesto-react/static/js/runtime-main.64d67204.js",
+    "runtime-main.js.map": "/PerS21/mesto-react/static/js/runtime-main.64d67204.js.map",
+    "static/js/2.74a8663e.chunk.js": "/PerS21/mesto-react/static/js/2.74a8663e.chunk.js",
+    "static/js/2.74a8663e.chunk.js.map": "/PerS21/mesto-react/static/js/2.74a8663e.chunk.js.map",
+    "static/js/3.f7a6632e.chunk.js": "/PerS21/mesto-react/static/js/3.f7a6632e.chunk.js",
+    "static/js/3.f7a6632e.chunk.js.map": "/PerS21/mesto-react/static/js/3.f7a6632e.chunk.js.map",
+    "index.html": "/PerS21/mesto-react/index.html",
+    "static/css/main.176a0ef1.chunk.css.map": "/PerS21/mesto-react/static/css/main.176a0ef1.chunk.css.map",
+    "static/js/2.74a8663e.chunk.js.LICENSE.txt": "/PerS21/mesto-react/static/js/2.74a8663e.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/PerS21/mesto-react/static/media/heartBlack.fe17a515.svg",
+    "static/media/Pencil.8667ac4a.svg": "/PerS21/mesto-react/static/media/Pencil.8667ac4a.svg",
+    "static/media/Plus.d86bb2ed.svg": "/PerS21/mesto-react/static/media/Plus.d86bb2ed.svg",
+    "static/media/VectorLogo.03b78ada.svg": "/PerS21/mesto-react/static/media/VectorLogo.03b78ada.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.575de3a3.js",
+    "static/js/runtime-main.64d67204.js",
     "static/js/2.74a8663e.chunk.js",
-    "static/css/main.fdfaff14.chunk.css",
+    "static/css/main.176a0ef1.chunk.css",
     "static/js/main.84a043ba.chunk.js"
   ]
 }
