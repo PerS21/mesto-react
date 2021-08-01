@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/PerS21/mesto-react/static/css/main.176a0ef1.chunk.css",
-    "main.js": "/PerS21/mesto-react/static/js/main.84a043ba.chunk.js",
-    "main.js.map": "/PerS21/mesto-react/static/js/main.84a043ba.chunk.js.map",
+    "main.js": "/PerS21/mesto-react/static/js/main.e408daca.chunk.js",
+    "main.js.map": "/PerS21/mesto-react/static/js/main.e408daca.chunk.js.map",
     "runtime-main.js": "/PerS21/mesto-react/static/js/runtime-main.64d67204.js",
     "runtime-main.js.map": "/PerS21/mesto-react/static/js/runtime-main.64d67204.js.map",
     "static/js/2.74a8663e.chunk.js": "/PerS21/mesto-react/static/js/2.74a8663e.chunk.js",
@@ -21,6 +21,6 @@
     "static/js/runtime-main.64d67204.js",
     "static/js/2.74a8663e.chunk.js",
     "static/css/main.176a0ef1.chunk.css",
-    "static/js/main.84a043ba.chunk.js"
+    "static/js/main.e408daca.chunk.js"
   ]
 }
