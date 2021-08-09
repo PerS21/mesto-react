@@ -92,6 +92,14 @@ class Api {
             })
             .then(this._checkResponse)
     }
+
+    changeLikeCardStatus(id, like) {
+        if (like) {
+            return this.putLike(id)
+        } else {
+            return this.deleteLike(id)
+        }
+    }
 }
 
 const api = new Api('https://mesto.nomoreparties.co/v1/cohort-25', 'da22e24c-dd01-4958-b7cb-8f4974dde69d');
