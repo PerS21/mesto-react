@@ -1,15 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import "../App.css";
 import Header from "./Header.jsx";
 import Main from "./Main.jsx";
 import Footer from "./Footer.jsx";
 import ImagePopup from "./ImagePopup.jsx";
 import PopupWithForm from "./PopupWithForm.jsx";
+import { TranslationContext } from './CurrentUserContext';
+import api from '../utils/api.js';
+
 
 function App() {
+
+  const [currentUser, setСurrentUser] = useState('');
+
+  useEffect(() => {
+    api.getUser().then((res) => {
+      setСurrentUser(res);
+    }).catch(error => console.log(error))
+  }, []);
+
   const [selectedCard, setSelectedCard] = useState(null);
 
-  function handleCardClick(card){
+  function handleCardClick(card) {
     setSelectedCard(card)
   }
 
@@ -29,7 +41,7 @@ function App() {
     setIsAddPlacePopupOpen(true)
   }
 
-  function closeAllPopups(){
+  function closeAllPopups() {
     setIsEditAvatarPopupOpen(false);
     setIsEditProfilePopupOpen(false);
     setIsAddPlacePopupOpen(false)
@@ -37,6 +49,7 @@ function App() {
   }
 
   return (
+    <TranslationContext.Provider value={currentUser}>
     <div className="page">
       <div className="page__container">
         <Header />
@@ -113,6 +126,7 @@ function App() {
         <ImagePopup card={selectedCard} onClose={closeAllPopups}/>
       </div>
     </div>
+    </TranslationContext.Provider >
   );
 }
 
