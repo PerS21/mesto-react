@@ -1,9 +1,9 @@
-import { TranslationContext } from './CurrentUserContext';
+import { CurrentUserContext } from './CurrentUserContext';
 import React from 'react';
 import api from '../utils/api.js'
 
 function Card(props) {
-    const currentUser = React.useContext(TranslationContext);
+    const currentUser = React.useContext(CurrentUserContext);
 
     const isOwn = props.card.owner._id === currentUser._id;
 

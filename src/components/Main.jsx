@@ -3,10 +3,10 @@ import addPlace from "../../src/images/Plus.svg";
 import api from '../utils/api.js'
 import React, { useState, useEffect } from 'react';
 import Card from './Card.jsx';
-import { TranslationContext } from './CurrentUserContext';
+import { CurrentUserContext } from './CurrentUserContext';
 
 function Main(props) {
-  const currentUser = React.useContext(TranslationContext);  
+  const currentUser = React.useContext(CurrentUserContext);  
 
   const [cards, setCards] = useState([]);
 
