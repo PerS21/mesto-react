@@ -1,5 +1,5 @@
 import { TranslationContext } from './CurrentUserContext';
-import React, { useState } from 'react';
+import React from 'react';
 import api from '../utils/api.js'
 
 function Card(props) {
@@ -8,7 +8,7 @@ function Card(props) {
     const isOwn = props.card.owner._id === currentUser._id;
 
     const cardDeleteButtonClassName = (
-        `card__delete-button button ${isOwn ? 'element__trash_visible' : 'element__trash_hidden'}`
+        `element__trash card__delete-button button ${isOwn ? 'element__trash_visible' : 'element__trash_hidden'}`
     );
 
     const isLiked = props.card.likes.some(i => i._id === currentUser._id);
@@ -27,7 +27,11 @@ function Card(props) {
         api.changeLikeCardStatus(props.card._id, !isLiked).then((newCard) => {
             props.setCards((state) => state.map((c) => c._id === props.card._id ? newCard : c));
         }).catch(error => console.log(error));
-    } 
+    }
+
+    function handleClickDelte() {
+        props.handleCardDelete(props.card);
+    }
 
     return (
         <li className="element">
@@ -39,7 +43,7 @@ function Card(props) {
                     <p className="element__heart-quantity">{props.card.likes.length}</p>
                 </div>
             </div>
-            <button type="button" className={cardDeleteButtonClassName}></button>
+            <button type="button" className={cardDeleteButtonClassName} onClick={handleClickDelte}></button>
         </li>
     );
 }
