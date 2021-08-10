@@ -81,9 +81,8 @@ function App() {
     })
   }
 
-  function handleAddPlaceSubmit(a, b) {
-    console.log(a, b)
-    api.addCard(a, b).then((res) => setCards([res, ...cards])).catch(error => console.log(error)).finally(() => closeAllPopups())
+  function handleAddPlaceSubmit(name, link) {
+    api.addCard(name, link).then((res) => setCards([res, ...cards])).catch(error => console.log(error)).finally(() => closeAllPopups())
   }
 
   return (
