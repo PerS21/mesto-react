@@ -8,19 +8,19 @@ import { CurrentUserContext } from './CurrentUserContext';
 function Main(props) {
   const currentUser = React.useContext(CurrentUserContext);  
 
-  const [cards, setCards] = useState([]);
+  // const [cards, setCards] = useState([]);
 
-  useEffect(() => {
-    api.getCards().then(res => setCards(res)).catch(error => console.log(error))
-  }, []);
+  // useEffect(() => {
+  //   api.getCards().then(res => setCards(res)).catch(error => console.log(error))
+  // }, []);
 
-  function handleCardDelete(card){
-    const cardId = card._id;
+  // function handleCardDelete(card){
+  //   const cardId = card._id;
 
-    api.deleteCard(cardId).then(() => {
-      setCards(cards.filter(card => card._id !== cardId))
-    })
-  }
+  //   api.deleteCard(cardId).then(() => {
+  //     setCards(cards.filter(card => card._id !== cardId))
+  //   })
+  // }
 
   return (
     <main className="content">
@@ -60,9 +60,9 @@ function Main(props) {
       </section>
       <section className="elements">
         <ul className="elements__list">
-          {cards.map((card) => {
+          {props.cards.map((card) => {
             return (
-              <Card card={card} setCards={setCards} onCardClick={props.onCardClick} key={card._id} handleCardDelete={handleCardDelete}/>
+              <Card card={card} setCards={props.setCards} onCardClick={props.onCardClick} key={card._id} handleCardDelete={props.handleCardDelete}/>
             )
           })}
         </ul>
