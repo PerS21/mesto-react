@@ -16,11 +16,11 @@ function EditProfilePopup(props) {
 
 
     function handleChangeName(e) {
-        setName(e.target.value)
+        setName(e.target.value);
     }
 
     function handleChangeDescription(e) {
-        setDescription(e.target.value)
+        setDescription(e.target.value);
     }
 
     function onSubmit(e){

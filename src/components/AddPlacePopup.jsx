@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import PopupWithForm from "./PopupWithForm.jsx";
 
 function AddPlacePopup(props) {
@@ -7,11 +7,11 @@ function AddPlacePopup(props) {
     const [fildImg, setFildImg] = useState('');
 
     function handleChangeFildPlace(e) {
-        setFildPlace(e.target.value)
+        setFildPlace(e.target.value);
     }
 
     function handleChangeFildImg(e) {
-        setFildImg(e.target.value)
+        setFildImg(e.target.value);
     }
 
 
