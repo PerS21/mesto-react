@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import PopupWithForm from "./PopupWithForm.jsx";
+import PopupWithForm from "./PopupWithForm.js";
 import { CurrentUserContext } from './CurrentUserContext';
 
 function EditProfilePopup(props) {

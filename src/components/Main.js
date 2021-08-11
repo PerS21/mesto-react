@@ -1,7 +1,7 @@
 import pencil from "../../src/images/Pencil.svg";
 import addPlace from "../../src/images/Plus.svg";
 import React from 'react';
-import Card from './Card.jsx';
+import Card from './Card.js';
 import { CurrentUserContext } from './CurrentUserContext';
 
 function Main(props) {
