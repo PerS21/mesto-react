@@ -47,7 +47,7 @@ function Main(props) {
         <ul className="elements__list">
           {props.cards.map((card) => {
             return (
-              <Card card={card} setCards={props.setCards} onCardClick={props.onCardClick} key={card._id} handleCardDelete={props.handleCardDelete}/>
+              <Card card={card} setCards={props.setCards} onCardClick={props.onCardClick} key={card._id} handleCardDelete={props.handleCardDelete} handleCardLike={props.handleCardLike}/>
             )
           })}
         </ul>

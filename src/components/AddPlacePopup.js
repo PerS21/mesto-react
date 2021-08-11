@@ -25,6 +25,7 @@ function AddPlacePopup(props) {
         <PopupWithForm title='Новое место' name='add-place' isOpen={props.isOpen} onClose={props.onClose} submitButtonText='Сохранить' onSubmit={onSubmit}>
         <div className="form__inputs">
           <input
+            value={fildPlace}
             id="place"
             required
             minLength="2"
@@ -37,6 +38,7 @@ function AddPlacePopup(props) {
           />
           <span id="place-error" className="form__input-error"></span>
           <input
+            value={fildImg}
             id="img"
             required
             name="fild_img"

@@ -12,7 +12,7 @@ function EditProfilePopup(props) {
     React.useEffect(() => {
         setName(currentUser.name);
         setDescription(currentUser.about);
-    }, [currentUser]);
+    }, [currentUser, props.isOpen]);
 
 
     function handleChangeName(e) {
@@ -32,6 +32,7 @@ function EditProfilePopup(props) {
         <PopupWithForm title='Редактировать профиль' name='profile-edit' isOpen={props.isOpen} onClose={props.onClose} submitButtonText='Сохранить' onSubmit={onSubmit}>
             <div className="form__inputs">
                 <input
+                    value={name || ''} 
                     id="name"
                     required
                     minLength="2"
@@ -44,6 +45,7 @@ function EditProfilePopup(props) {
                 />
                 <span id="name-error" className="form__input-error"></span>
                 <input
+                    value={description || ''} 
                     id="about"
                     required
                     minLength="2"
