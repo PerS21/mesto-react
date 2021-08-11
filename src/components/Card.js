@@ -1,6 +1,5 @@
 import { CurrentUserContext } from '../contexts/CurrentUserContext';
 import React from 'react';
-import api from '../utils/api.js'
 
 function Card(props) {
     const currentUser = React.useContext(CurrentUserContext);
