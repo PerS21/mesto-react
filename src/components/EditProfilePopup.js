@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PopupWithForm from "./PopupWithForm.js";
-import { CurrentUserContext } from './CurrentUserContext';
+import { CurrentUserContext } from '../contexts/CurrentUserContext';
 
 function EditProfilePopup(props) {
 

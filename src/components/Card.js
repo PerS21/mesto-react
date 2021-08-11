@@ -1,4 +1,4 @@
-import { CurrentUserContext } from './CurrentUserContext';
+import { CurrentUserContext } from '../contexts/CurrentUserContext';
 import React from 'react';
 import api from '../utils/api.js'
 
